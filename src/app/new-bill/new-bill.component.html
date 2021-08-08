@@ -1,0 +1,40 @@
+<div class="panel panel-primary box">
+    <div class="panel-body" *ngIf="!isNewBillShow">
+        <form [formGroup]="seleteItemForm" (ngSubmit)="onSubmit()" class="form">
+            <label>Select Item</label>
+            <select type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                <option value="">Select</option>
+                <option *ngFor="let item of itemsList" [value]="item.name">{{ item.name }}</option>
+            </select>
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                  <div *ngIf="f.name.errors.required" class="error">Name is required</div>
+            </div>
+            <br>
+            <input type="number" formControlName="quantity" placeholder="quantity" class="form-control" min="1" [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }">
+            <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
+                  <div *ngIf="f.quantity.errors.required" class="error">Quantity is required</div>
+            </div>
+            <button type="submit" class="add_item">Add</button>
+        </form>
+    </div>
+    <div class="panel-body" *ngIf="isNewBillShow">
+        <h4>New Bill 
+            <span class="cart_items">Cart 
+                <span class="items_count">{{newBillItems.length}}</span>
+                <span class="glyphicon glyphicon-plus" aria-hidden="true" (click)="isNewBillShow=!isNewBillShow"></span>
+            </span>
+        </h4>
+        <div class="single_item" *ngFor="let item of newBillItems">
+            <span class="item_left_data">Rs. {{item.quantity * item.price}}</span>
+            <span>{{item.name}}</span><br>
+            <span class="qty_data">Quantity: {{item.quantity}}</span>
+        </div>
+        <div class="single_item footer">
+            <span class="item_left_data">Total Items: {{newBillItems.length}}</span>
+            <span>Amount: Rs. {{getTotal()}}</span><br>
+            <div class="text-right">
+                <button (click)="checkout()" class="place-order add_item">place order</button>
+            </div>
+        </div>
+  </div>
+</div>
