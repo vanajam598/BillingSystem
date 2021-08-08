@@ -1,0 +1,27 @@
+<div class="panel panel-primary box">
+    <div class="panel-body" *ngIf="!isItemShow">
+        <form [formGroup]="itemForm" (ngSubmit)="onSubmit()" class="form">
+            <label>Add Item</label>
+            <input type="text" formControlName="name" placeholder="Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                  <div *ngIf="f.name.errors.required" class="error">Name is required</div>
+            </div>
+            <br>
+            <input type="number" formControlName="price" placeholder="price" class="form-control" min="1" [ngClass]="{ 'is-invalid': submitted && f.price.errors }">
+            <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                  <div *ngIf="f.price.errors.required" class="error">Price is required</div>
+            </div>
+            <button type="submit" class="add_item">Add</button>
+        </form>
+    </div>
+    <div class="panel-body" *ngIf="isItemShow">
+        <h4>Items</h4>
+        <div class="single_item" *ngFor="let item of itemsList">
+            <span class="item_left_data">Rs. {{item.price}}</span>
+            <span>{{item.name}}</span><br>
+            <span class="qty_data">sold: {{item.sold}}</span>
+        </div>
+        <div (click)="isItemShow=!isItemShow" class="glyphicon glyphicon-plus add-item-icon"></div>
+    </div>
+
+</div>
