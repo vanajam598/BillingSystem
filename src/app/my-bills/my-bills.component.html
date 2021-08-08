@@ -1,0 +1,10 @@
+<div class="panel panel-primary box">
+    <div class="panel-body">
+          <h4>My Bills</h4>
+          <div class="single_item" *ngFor="let billItem of bills">
+              <span class="item_left_data">Rs. {{billItem.total}}</span>
+              <span>{{billItem.billId}}</span><br>
+              <span class="qty_data">{{getDate(billItem.orderDate)}}</span>
+          </div>
+    </div>
+</div>
