@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "name": "book",
+      "price": 10,
+      "date": "2021-08-08T14:42:38.857Z",
+      "sold": 25,
+      "id": 1
+    },
+    {
+      "name": "pen",
+      "price": 5,
+      "date": "2021-08-08T14:42:46.856Z",
+      "sold": 105,
+      "id": 2
+    },
+    {
+      "name": "Eraser",
+      "price": 5,
+      "date": "2021-08-08T15:29:08.173Z",
+      "sold": 20,
+      "id": 3
+    }
+  ],
+  "orderItems": [
+    {
+      "billId": "BILL1628433776368",
+      "orderDate": "2021-08-08T14:42:56.368Z",
+      "items": [
+        {
+          "sold": "0",
+          "name": "book",
+          "price": 10,
+          "quantity": 10,
+          "total": 100,
+          "date": "2021-08-08T14:42:54.736Z"
+        }
+      ],
+      "total": 100,
+      "id": 1
+    },
+    {
+      "billId": "BILL1628433955642",
+      "orderDate": "2021-08-08T14:45:55.642Z",
+      "items": [
+        {
+          "id": 2,
+          "sold": "0",
+          "name": "pen",
+          "price": 5,
+          "quantity": 100,
+          "total": 500,
+          "date": "2021-08-08T14:45:50.678Z"
+        }
+      ],
+      "total": 500,
+      "id": 2
+    },
+    {
+      "billId": "BILL1628434107880",
+      "orderDate": "2021-08-08T14:48:27.880Z",
+      "items": [
+        {
+          "id": 1,
+          "sold": "0",
+          "name": "book",
+          "price": 10,
+          "quantity": 5,
+          "total": 50,
+          "date": "2021-08-08T14:48:05.405Z"
+        }
+      ],
+      "total": 50,
+      "id": 3
+    },
+    {
+      "billId": "BILL1628434312739",
+      "orderDate": "2021-08-08T14:51:52.739Z",
+      "items": [
+        {
+          "id": 1,
+          "sold": 5,
+          "name": "book",
+          "price": 10,
+          "quantity": 10,
+          "total": 100,
+          "date": "2021-08-08T14:51:47.865Z"
+        }
+      ],
+      "total": 100,
+      "id": 4
+    },
+    {
+      "billId": "BILL1628434449057",
+      "orderDate": "2021-08-08T14:54:09.057Z",
+      "items": [
+        {
+          "id": 1,
+          "sold": 15,
+          "name": "book",
+          "price": 10,
+          "quantity": 5,
+          "total": 50,
+          "date": "2021-08-08T14:53:45.284Z"
+        },
+        {
+          "id": 2,
+          "sold": 100,
+          "name": "pen",
+          "price": 5,
+          "quantity": 5,
+          "total": 25,
+          "date": "2021-08-08T14:53:52.923Z"
+        }
+      ],
+      "total": 75,
+      "id": 5
+    },
+    {
+      "billId": "BILL1628436635075",
+      "orderDate": "2021-08-08T15:30:35.075Z",
+      "items": [
+        {
+          "id": 1,
+          "sold": 20,
+          "name": "book",
+          "price": 10,
+          "quantity": 5,
+          "total": 50,
+          "date": "2021-08-08T15:30:18.704Z"
+        },
+        {
+          "id": 3,
+          "sold": "0",
+          "name": "Eraser",
+          "price": 5,
+          "quantity": 20,
+          "total": 100,
+          "date": "2021-08-08T15:30:31.592Z"
+        }
+      ],
+      "total": 150,
+      "id": 6
+    }
+  ]
+}
